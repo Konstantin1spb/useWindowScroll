@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useWindowEvent } from './useWindowEvent';
 
 export const useWindowScroll = () => {
-	const [scroll, setScroll] = useState({ x: 0, y: 0 });
+	const [scroll, setScroll] = useState({ x: window.scrollX, y: window.scrollY });
 
 	useWindowEvent('scroll', () => {
 		setScroll({ x: window.scrollX, y: window.scrollY });
