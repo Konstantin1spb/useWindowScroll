@@ -1,10 +1,10 @@
-import { useWindowScroll } from './useWindowScroll';
+import { useWindowScroll } from './hooks/useWindowScroll';
 
 function Demo() {
 	const [scroll, scrollTo] = useWindowScroll();
 
 	return (
-		<div>
+		<div style={{ width: 2000, height: 1000, marginTop: 400 }}>
 			<p>
 				Scroll position x: {scroll.x}, y: {scroll.y}
 			</p>
